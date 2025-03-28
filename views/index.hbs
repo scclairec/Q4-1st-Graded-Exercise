@@ -29,33 +29,33 @@
 
 
   <header class="w3-container" id="header" > 
-    <h1>Roy Canseco - III-K - Jan 2025</h1>
+    <h1>Stephanie Coloma - III-K - March 2025</h1>
     <h2> Birthday </h2>
   </header>
 
   <section class="w3-container" id="input"> 
     <h2>Input</h2>
     <!-- define the form and prevents its default action after it is submitted then call three functions-->
-    <form  id="input_form" method="post" action="/happy" 
+    <form  id="input_form" method="POST" action="/happy" 
         onsubmit="return confirm('Sure to Submit')"
-        onreset="return confirm('Sure to Submit')"
+        onreset="return confirm('Sure to Reset')"
     />
 
       <div class="w3-row">
         <div class="w3-third w3-panel w3-card w3-margin">
           <label for="name">Your nickname:</label></br>
-          <input class="w3-input" type="text" id="name" name="name"><br>
+          <input class="w3-input" type="text" id="name" name="name" required><br>
 
           <label for="gender">Gender: </label><br>
-          <input class="w3-radio"  type="radio" id="male" name="gender" value="male">
+          <input class="w3-radio"  type="radio" id="male" name="gender" value="male" required>
           <label for="male">Male</label> <br>
-          <input class="w3-radio w3-margin-bottom"  type="radio" id="female" name="gender" value="female">
+          <input class="w3-radio w3-margin-bottom"  type="radio" id="female" name="gender" value="female" required>
           <label for="female">Female</label>
         </div>
       
       <div class="w3-panel w3-third w3-card w3-margin w3-padding"
       <label for="number"> Number of close family and friends: </label><br>
-      <select class="w3-select w3-border" id="number" name="number" onchange="generateGuestFields()">
+      <select class="w3-select w3-border" id="number" name="number" onchange="generateGuestFields()" required>
         <option value="">--Please choose a number--</option>
         <!-- sample use of script to generate choices for a drop-down menu that shows numbers from 1 to 16 -->
         <script>
@@ -69,7 +69,7 @@
       <!-- clicking on the submit button activates the onsubmit event handler attached to the form tag -->
       <div id="guests">  </div>
         <input class="w3-button w3-black w3-margin" type="submit" value="Submit">
-         <input class="w3-button w3-black w3-margin" type="reset" value="Submit">
+         <input class="w3-button w3-black w3-margin" type="reset" value="Reset">
       </div>
       </div>
       
@@ -77,12 +77,12 @@
   </section>
 
   <footer class="w3-container ">
-    <p> &copy; 2024 CS3 Teachers </p>
+    <p> &copy; COLOMA 2025 </p>
   </footer>
 
   <script>
     function generateGuestFields(){
-    const num = document.getElementById('number').value; // gets the numer of guests
+    const num = document.getElementById('number').value; // gets the number of guests
     const container = document.getElementById('guests');
     container.innerHTML = 'Enter the name(s) of your invitees: <br>';
 
